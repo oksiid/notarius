@@ -1,0 +1,411 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <title>Нотариус Ковальчук Юлия Игоревна</title>
+  </head>
+  <body style="font-family: 'Oswald'">
+    <div style="background-color: #F5F5F5" class="d-none d-md-block text-right">
+            <h6 class="mr-5">
+                <img style="height: 25px" src="{% static 'icons8-marker-50.png' %}" alt="">г. Симферополь, ул. Толстого, д. 10
+                <img style="height: 25px" src="{% static 'icons8-iphone-50.png' %}" alt=""><a style="color: black" href="tel:+79787273217">+7(978)-770-28-60</a>
+            </h6>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand" href="#"><img src="{% static 'logo.png' %}" style="height: 70px" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a style="color: #E3BE78" class="nav-link" href="{% url 'index' %}">Главная<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a onmouseover="this.style.color='#E3BE78';" onmouseout="this.style.color='rgba(0,0,0,.5)';" class="nav-link anch" href="#uslugi">Нотариальные действия</a>
+          </li>
+          <li class="nav-item">
+            <a onmouseover="this.style.color='#E3BE78';" onmouseout="this.style.color='rgba(0,0,0,.5)';" class="nav-link anch" href="#prices">Тарифы</a>
+          </li>
+          <li class="nav-item">
+            <a onmouseover="this.style.color='#E3BE78';" onmouseout="this.style.color='rgba(0,0,0,.5)';" class="nav-link anch" href="#company">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a onmouseover="this.style.color='#E3BE78';" onmouseout="this.style.color='rgba(0,0,0,.5)';" class="nav-link anch" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+
+          <a class="my-2 my-lg-0" href="{% url 'zapis' %}"><button class="btn my-2 my-sm-0" type="submit">Записаться на прием</button></a>
+
+      </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'home-slider-1.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h2>Законность нотариальной деятельности</h2>
+            <p class="d-none d-md-block">Нотариус обязан точно и неукоснительно следовать предписаниям закона.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'home-slider-2.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h2>Охрана интересов лиц, обратившихся за совершением нотариального действия</h2>
+            <p class="d-none d-md-block">Нотариус обязан оказывать физическим и юридическим лицам содействие в осуществлении их прав и защите законных интересов, разъяснять им права и обязанности, предупреждать о последствиях совершаемых нотариальных действий, с тем, чтобы юридическая неосведомленность не могла быть использована им во вред.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'home-slider-3.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h2>Соблюдение тайны совершаемых нотариальных действий</h2>
+            <p class="d-none d-md-block">Закон обязывает нотариуса хранить в тайне сведенья, которые стали известны ему в связи с осуществлением его профессиональной деятельности.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="container">
+        <h1 id="uslugi" class="text-center mt-5">Нотариальные действия</h1>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <a class="zapis_a" href="{% url 'zapis' %}">
+                    <div class="card-bg" style="background-image: url('{% static 'dover.jpg' %}');">
+                        <div style="opacity: 0.9"  class="card text-center" onmouseover="hover1();" onmouseout="unhover1();">
+                          <div style="opacity: 0.9"  class="card-body">
+                              <img id="usluga_1" style="width: 70px" src="{% static 'icons8-rubber-stamp-100black.png' %}" alt="">
+                              <h5 class="card-title">Доверенности</h5>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <div class="card-bg" style="background-image: url('{% static 'sogl.jpg' %}');">
+                    <div style="opacity: 0.9"  class="card text-center" onmouseover="hover2();" onmouseout="unhover2();">
+                      <div style="opacity: 0.9"  class="card-body">
+                          <img id="usluga_2" style="width: 70px" src="{% static 'icons8-helping-hand-100black.png' %}" alt="">
+                          <h5 class="card-title">Согласия</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <div class="card-bg" style="background-image: url('{% static 'zayvl.jpg' %}');">
+                    <div style="opacity: 0.9"  class="card text-center" onmouseover="hover3();" onmouseout="unhover3();">
+                      <div style="opacity: 0.9"  class="card-body">
+                          <img id="usluga_3" style="width: 70px" src="{% static 'icons8-autograph-100black.png' %}" alt="">
+                          <h5 class="card-title">Заявления</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <div class="card-bg" style="background-image: url('{% static 'kopiij.jpg' %}');">
+                    <div style="opacity: 0.9"  class="card text-center" onmouseover="hover4();" onmouseout="unhover4();">
+                      <div style="opacity: 0.9"  class="card-body">
+                          <img id="usluga_4" style="width: 70px" src="{% static 'icons8-copy-100black.png' %}" alt="">
+                          <h5 class="card-title">Копии</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <div class="card-bg" style="background-image: url('{% static 'dogovor.jpg' %}');">
+                    <div style="opacity: 0.9"  class="card text-center" onmouseover="hover5();" onmouseout="unhover5();">
+                      <div style="opacity: 0.9"  class="card-body">
+                          <img id="usluga_5" style="width: 70px" src="{% static 'icons8-bag-100black.png' %}" alt="">
+                          <h5 class="card-title">Договоры, соглашения</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <div class="card-bg" style="background-image: url('{% static 'nasledstvo.jpg' %}');">
+                    <div style="opacity: 0.9"  class="card text-center" onmouseover="hover6();" onmouseout="unhover6();">
+                      <div style="opacity: 0.9"  class="card-body">
+                          <img id="usluga_6" style="width: 70px" src="{% static 'icons8-coins-100black.png' %}" alt="">
+                          <h5 class="card-title">Наследство</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <div class="card-bg" style="background-image: url('{% static 'konsult.jpg' %}');">
+                    <div style="opacity: 0.9"  class="card text-center" onmouseover="hover7();" onmouseout="unhover7();">
+                      <div style="opacity: 0.9"  class="card-body">
+                          <img id="usluga_7" style="width: 70px" src="{% static 'icons8-communicate-100black.png' %}" alt="">
+                          <h5 class="card-title">Консультация</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-2 card-bg" >
+                <div class="card-bg" style="background-image: url('{% static 'doc_obrazec.jpg' %}');">
+                    <div style="opacity: 0.9"  class="card text-center" onmouseover="hover8();" onmouseout="unhover8();">
+                      <div style="opacity: 0.9"  class="card-body">
+                          <img id="usluga_8" style="width: 70px" src="{% static 'icons8-parchment-100black.png' %}" alt="">
+                          <h5 class="card-title">Документ по образцу</h5>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2 class="text-center mt-4">Наши услуги</h2>
+        <div class="row mt-3 mb-4">
+            <div class="col-12 col-md-6">
+                <h5>
+                    <ul class="uslugi_list">
+                        <li class="mt-2">Бесплатные консультации по нотариальным действиям</li>
+                        <li class="mt-2">Передача документов в ИФНС в электронной форме (для ИП и юр. лиц)</li>
+                        <li>Переводы документов прямо в нашей нотариальной конторе</li>
+                    </ul>
+                </h5>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>
+                    <ul class="uslugi_list">
+                        <li class="mt-2">Заказ выписок из ЕГРЮЛ для свидетельствования заявлений ИП и юр. лиц</li>
+                        <li class="mt-2">Заказ выписок из ЕГРН для нотариальных действий</li>
+                        <li class="mt-2">Выезд нотариуса в офис, на дом, в больницу и пр.</li>
+                    </ul>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <div id="question"  style="background-image: url('{% static 'question_form.jpg' %}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 mt-5 mb-5">
+                    <h3 style="color: #F5F5F5">Заявка на консультацию</h3>
+                    <form>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Телефон">
+                      </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                      <button id="btn_question" type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center mt-5" id="prices">Тарифы</h1>
+        <h5 class="text-center">
+            Нотариальный тариф и размеры платы за услуги правового и технического характера по совершаемым нотариальным действиям на 2020 год
+
+            <a style="color: #E3BE78" class="text-center" target="_blank" href="{% static 'tarif-16012020.pdf' %}"><img src="{% static 'icons8-pdf-100.png' %}" alt="">Ознакомится с тарифами</a>
+        </h5>
+        <hr>
+        <h1 id="company" class="text-center mt-5">Нотариальная контора с безупречной репутацией</h1>
+        <h5>
+            Нотариальная контора – место, куда приходят решать самые важные вопросы. Именно здесь ежедневно заключаются крупные сделки, оформляются соглашения и подписываются доверенности, способные изменить жизнь многих людей. Насколько честной будет каждая операция, во многом зависит от нотариуса. Профессионал с большим опытом работы не допустит обмана и предупредит клиентов о возможных последствиях.
+            <br>
+            <br>
+            Именно так работает контора нотариуса города Москвы Виктории Алексеевны Король. Перед проведением консультации или подписанием документов все материалы досконально изучаются, вне зависимости от объема и характера предоставляемой услуги.
+            <br>
+            <br>
+            Наши принципы:
+                <ul class="mt-2">
+                    <li class="mt-2">Ответственность. Мы гарантируем высокое качество услуги – ваше дело в надежных руках.</li>
+                    <li class="mt-2">Индивидуальный подход. Мы одинаково внимательно относимся к каждому клиенту, будь то крупная коммерческая компания или физическое лицо. Мы тщательно прорабатываем каждую деталь и предупреждаем о возможных рисках.</li>
+                    <li class="mt-2">Доступность. С нами удобно работать: офис находится на Арбате, рядом – отличная парковка. Вы можете спокойно обсудить дела в комфортном кабинете или заключить сделку в отдельной переговорной. При необходимости нотариус приедет к вам в офис.</li>
+                </ul>
+            <hr>
+        </h5>
+        <h1 id="contacts" class="text-center mt-5">Контакты</h1>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h5>
+                    Обратившись к нам один раз, вы захотите вернуться к нам снова – нотариальная контора станет вашим надежным партнером и поможет защитить ваши права в любой ситуации.
+                    <br><br>
+                    Позвоните по телефону: <a style="color: #E3BE78" href="tel:+79787273217">+7(978)-770-28-60</a>, закажите консультацию направив письмо на наш email: <span style="color: #E3BE78">u100500@mail.ru</span> или запишитесь на прием на нашем сайте.
+                    <br><br>
+                    Мы незамедлительно назначим встречу и поможем решить вашу проблему.
+                    <br><br>
+                    Наша нотариальная контора находится по адресу: <span style="color: #E3BE78;">г. Симферополь, ул. Толстого, д. 10</span>
+                    <br><br>
+                    Лицензия на право нотариальной деятельности № 081016 от 26.03.2010г. Приказ Минюста № 190 от 27.03.2014г.
+                </h5>
+            </div>
+            <div class="col-12 col-lg-6 mt-3" id="YaMaps"></div>
+        </div>
+    </div>
+
+    <footer style="background-color: #EBEEF0">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12 col-md-6 mt-3">
+                    <h5>Адрес:
+                        <br>
+                        <img style="height: 25px" src="{% static 'icons8-marker-50.png' %}" alt="">г. Симферополь, ул. Толстого, д. 10
+                    </h5>
+                    <h5>Время работы:
+                        <br>
+                        <img style="height: 25px" src="{% static 'icons8-clock-50.png' %}" alt="">
+                        Пн-Пт с 9:00 - 17:00
+                        <br>
+                        Сб-Вс Выходной
+                    </h5>
+                </div>
+                <div class="col-12 col-md-6 mt-3">
+                    <h5>Контакты:
+                        <br>
+                        <img style="height: 25px" src="{% static 'icons8-iphone-50.png' %}" alt=""><a style="color: black" href="tel:+79787273217">+7(978)-770-28-60</a>
+                        <br>
+                        <img style="height: 25px" src="{% static 'icons8-composing-mail-50.png' %}" alt="">u100500@mail.ru
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+    document.querySelectorAll('a.anch[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
+  <script>
+        YaMapsShown = false;
+
+        $(document).ready(function (){
+
+         $(window).scroll(function() {
+            if (!YaMapsShown){
+             if($(window).scrollTop() + $(window).height() > $(document).height() - 3500) {
+              showYaMaps();
+              YaMapsShown = true;
+             }
+            }
+         });
+
+        });
+
+        function showYaMaps(){
+         var script   = document.createElement("script");
+         script.type  = "text/javascript";
+         script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ba938bff4436088db4248321e521cfa13cdc49503fc1bad929a36513b1f329b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true";
+         document.getElementById("YaMaps").appendChild(script);
+        };
+
+  </script>
+  <script>
+        function hover1() {
+          $('#usluga_1').attr('src', '{% static "icons8-rubber-stamp-100gold.png" %}')
+        }
+
+        function unhover1() {
+          $('#usluga_1').attr('src', '{% static "icons8-rubber-stamp-100black.png" %}')
+        }
+
+
+        function hover2() {
+          $('#usluga_2').attr('src', '{% static "icons8-helping-hand-100gold.png" %}')
+        }
+
+        function unhover2() {
+          $('#usluga_2').attr('src', '{% static "icons8-helping-hand-100black.png" %}')
+        }
+
+
+        function hover3() {
+          $('#usluga_3').attr('src', '{% static "icons8-autograph-100gold.png" %}')
+        }
+
+        function unhover3() {
+          $('#usluga_3').attr('src', '{% static "icons8-autograph-100black.png" %}')
+        }
+
+
+        function hover4() {
+          $('#usluga_4').attr('src', '{% static "icons8-copy-100gold.png" %}')
+        }
+
+        function unhover4() {
+          $('#usluga_4').attr('src', '{% static "icons8-copy-100black.png" %}')
+        }
+
+
+        function hover5() {
+          $('#usluga_5').attr('src', '{% static "icons8-bag-100gold.png" %}')
+        }
+
+        function unhover5() {
+          $('#usluga_5').attr('src', '{% static "icons8-bag-100black.png" %}')
+        }
+
+
+        function hover6() {
+          $('#usluga_6').attr('src', '{% static "icons8-coins-100gold.png" %}')
+        }
+
+        function unhover6() {
+          $('#usluga_6').attr('src', '{% static "icons8-coins-100black.png" %}')
+        }
+
+
+        function hover7() {
+          $('#usluga_7').attr('src', '{% static "icons8-communicate-100gold.png" %}')
+        }
+
+        function unhover7() {
+          $('#usluga_7').attr('src', '{% static "icons8-communicate-100black.png" %}')
+        }
+
+
+        function hover8() {
+          $('#usluga_8').attr('src', '{% static "icons8-parchment-100gold.png" %}')
+        }
+
+        function unhover8() {
+          $('#usluga_8').attr('src', '{% static "icons8-parchment-100black.png" %}')
+        }
+    </script>
+  </body>
+</html>

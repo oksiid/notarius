@@ -1,0 +1,70 @@
+.navbar-nav a{
+    font-size: 1.2rem;
+
+}
+@media (max-width: 570px)
+{
+    .carousel-caption h2{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 470px)
+{
+    .carousel-caption h2{
+        font-size: 1rem;
+    }
+}
+.card{
+    border-radius: 0;!important;
+}
+.zapis_a:hover{
+
+  color: #E3BE78;
+}
+.card-bg{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#question{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#btn_question{
+    color: white;
+}
+.btn-primary{
+    background-color: #E3BE78;
+}
+.card-body{
+    opacity: 0;
+    background-color: #E3BE78;
+    color: #5B5F62;
+}
+.card-body:hover{
+    background-color: #5B5F62;
+    color: #E3BE78;
+}
+
+
+.btn {
+    color: #E3BE78;
+    border-color: #E3BE78;
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
+    color: white;
+    border-color: #E3BE78;
+    background-color: #E3BE78;
+    outline-color: #E3BE78;
+}
+
+
+#footer-zapis{
+    margin-top: 150px;
+    }
+
+
